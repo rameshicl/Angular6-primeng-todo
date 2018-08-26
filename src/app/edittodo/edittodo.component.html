@@ -1,0 +1,10 @@
+<div *ngIf="worklist" class="viewtodo">
+  <h3>Edit Activity</h3>
+  <span class="ui-float-label">
+      <input id="float-input" type="text" [(ngModel)]="worklist.activity"  size="30" pInputText> 
+      <label for="float-input">Activity</label>
+  </span>
+  <button pButton label="Back" class="ui-button-raised" (click)="goBack()"></button>
+  <button pButton label="Save" class="ui-button-raised ui-button-success" (click)="save()"></button>
+</div>
+  

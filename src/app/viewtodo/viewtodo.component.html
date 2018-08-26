@@ -1,0 +1,25 @@
+<div class="viewtodo">
+    <h2>My Activities</h2>
+    <label>Todo:</label>
+      <input #todoname pInputText/>
+    <button pButton (click)="add(todoname.value); todoname.value=''" type="button" label="ADD" class="ui-button-raised addclass"></button>
+  </div>
+<p-table [value]="allActivity">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Activity</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-worklist>
+        <tr>
+            <td>{{worklist.id}}</td>
+            <td>{{worklist.activity}}</td>
+            <td><a routerLink="/edit/{{worklist.id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td style="cursor:pointer" (click)="delete(worklist)"><i class="fa fa-trash" aria-hidden="true"></i></td>
+            
+        </tr>
+    </ng-template>
+</p-table>

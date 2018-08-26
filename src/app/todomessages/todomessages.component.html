@@ -1,0 +1,7 @@
+<div *ngIf="alertres.messages.length" style="float: right;">
+
+  <h2>Messages</h2>
+  <button pButton type="button" label="Clear" class="ui-button-raised" (click)="alertres.clear()"></button>
+  <div *ngFor='let message of alertres.messages'> {{message}} </div>
+
+</div>

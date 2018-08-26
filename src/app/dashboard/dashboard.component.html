@@ -1,0 +1,10 @@
+<div class="calendarcls">
+    <p-calendar [(ngModel)]="date14" [inline]="true"></p-calendar>
+</div>
+<h3>Todos</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let worklist of allActivity" class="col-1-4" routerLink="/edit/{{worklist.id}}">
+    <p-card title="{{worklist.activity}}" [style]="{color:'green'}">
+    </p-card>
+  </a>
+</div>
